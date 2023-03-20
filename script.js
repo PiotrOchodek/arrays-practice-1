@@ -30,7 +30,7 @@ console.log(`Task 4: ${numbers}`);
 
 // Task 5 - multiply each element from the magicNumbers *2 and return new array with the multiplied result
 const magicNumbers = [4, 6, 8, 10];
-const newArray = magicNumbers.map(function (par) {
+const newArray = magicNumbers.map((par) => {
   return par * 2;
 });
 
@@ -48,7 +48,7 @@ console.log(`Task 6: ${modifiedOriginal}`);
 
 // Task 7 - Return a new array containing only even numbers
 const filterMe = [1, 2, 3, 4, 5, 6, 7, 8, 9, 19];
-const onlyOddsNumbers = filterMe.filter(function (par) {
+const onlyOddsNumbers = filterMe.filter((par) => {
   return par % 2 === 0;
 });
 
@@ -56,11 +56,17 @@ console.log(`Task 7: ${onlyOddsNumbers}`);
 
 // Task 8 - sort from shortest to largest digit and return new sorted array
 const unsorted = [10, 1, 6, 3, 7, 29, 14, 18];
-const sorted = Array.from(unsorted).sort(function (a, b) {
+const sorted = Array.from(unsorted).sort((a, b) => {
+  return a - b;
+});
+// Destructuring
+const [...unsorted2] = unsorted;
+const sorted2 = unsorted2.sort((a, b) => {
   return a - b;
 });
 
 console.log(`Task 8: ${unsorted}`);
+console.log(`Destructured and sorted:  ${sorted2}`);
 console.log(`Task 8 sorted: ${sorted}`);
 
 const sliced = unsorted.slice(1, 5);
@@ -81,7 +87,7 @@ for (let i = 0; i < fruits.length; i++) {
   console.log(`Extra task: ${fruits[i]}`);
 }
 
-fruits.forEach(function (val) {
+fruits.forEach((val) => {
   console.log(`Ekstra task 2: ${val}`);
 });
 
